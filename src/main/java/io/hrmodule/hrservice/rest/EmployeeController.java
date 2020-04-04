@@ -19,6 +19,11 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @GetMapping("/")
+    public String welcome() {
+        return "Welcome to HR-service ! ! !";
+    }
+
     @GetMapping("/employees")
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
