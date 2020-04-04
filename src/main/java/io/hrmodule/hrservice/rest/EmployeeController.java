@@ -19,7 +19,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     public String welcome() {
         return "Welcome to HR-service ! ! !";
     }
