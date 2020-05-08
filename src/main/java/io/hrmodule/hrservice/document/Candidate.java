@@ -19,7 +19,7 @@ public class Candidate {
     private String id;
 
     @NotNull
-    private String name;
+    private String fullName;
 
     @NotNull
     private String surname;
@@ -31,12 +31,12 @@ public class Candidate {
 
     private String attachment;
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getSurname() {
