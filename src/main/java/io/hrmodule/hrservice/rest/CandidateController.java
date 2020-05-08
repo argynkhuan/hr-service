@@ -44,7 +44,7 @@ public class CandidateController {
                 .orElseThrow(() -> new ResourceNotFoundException("Candidate not found for this id :: " + candidateId));
 
 
-        candidate.setName(candidateDetails.getName());
+        candidate.setFullName(candidateDetails.getFullName());
         candidate.setSurname(candidateDetails.getSurname());
         candidate.setEmail(candidateDetails.getEmail());
         candidate.setPhoneNumber(candidateDetails.getPhoneNumber());
