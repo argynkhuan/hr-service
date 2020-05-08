@@ -10,8 +10,9 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.List;
+
 @SuppressWarnings("serial")
-@Document ("vacancy")
+@Document("vacancy")
 @TypeAlias("Vacancy")
 public class Vacancy {
 
@@ -20,10 +21,34 @@ public class Vacancy {
     private String id;
 
     @NotNull
-    private String title;
+    private String name;
 
     @NotNull
     private List<Employee> employees;
 
     private List<Candidate> candidates;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
+
+    public List<Candidate> getCandidates() {
+        return candidates;
+    }
+
+    public void setCandidates(List<Candidate> candidates) {
+        this.candidates = candidates;
+    }
 }

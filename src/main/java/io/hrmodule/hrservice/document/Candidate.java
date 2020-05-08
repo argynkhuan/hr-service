@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import javax.validation.constraints.NotNull;
 
 @SuppressWarnings("serial")
-@Document ("candidate")
+@Document("candidate")
 @TypeAlias("Candidate")
 public class Candidate {
 
@@ -24,8 +24,10 @@ public class Candidate {
     @NotNull
     private String surname;
 
-    private String status;
+    private String phoneNumber;
 
     @NotNull
-    private String vacancyID;
+    private String email;
+
+    private String file;
 }
