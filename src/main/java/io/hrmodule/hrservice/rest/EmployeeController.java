@@ -1,7 +1,6 @@
 package io.hrmodule.hrservice.rest;
 
 import io.hrmodule.hrservice.document.Employee;
-import io.hrmodule.hrservice.document.Feedback;
 import io.hrmodule.hrservice.exception.ResourceNotFoundException;
 import io.hrmodule.hrservice.repository.EmployeeRepository;
 import io.hrmodule.hrservice.service.NotificationService;
