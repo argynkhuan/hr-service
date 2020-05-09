@@ -1,8 +1,10 @@
 package io.hrmodule.hrservice.rest;
 
 import io.hrmodule.hrservice.document.Employee;
+import io.hrmodule.hrservice.document.Feedback;
 import io.hrmodule.hrservice.exception.ResourceNotFoundException;
 import io.hrmodule.hrservice.repository.EmployeeRepository;
+import io.hrmodule.hrservice.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +20,8 @@ import java.util.Map;
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
+
+    private NotificationService notificationService;
 
     @GetMapping("")
     public String welcome() {
@@ -64,6 +68,14 @@ public class EmployeeController {
         employeeRepository.delete(employee);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
+        return response;
+    }
+
+    @PostMapping("/employees/feedback")
+    public Map<String, Boolean> sendFeedback(@Valid @RequestBody Employee employee) {
+        notificationService.sendMessage(employee);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("sent", Boolean.TRUE);
         return response;
     }
 }

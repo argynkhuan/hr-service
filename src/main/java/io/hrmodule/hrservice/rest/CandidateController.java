@@ -19,9 +19,15 @@ public class CandidateController {
     @Autowired
     private CandidateRepository candidateRepository;
 
+
     @GetMapping("/candidates")
     public List<Candidate> getAllCandidates() {
         return candidateRepository.findAll();
+    }
+
+    @GetMapping("/candidates/{status}")
+    public List<Candidate> getCandidatesByStatus(@PathVariable(value = "status") String candidateStatus) {
+        return candidateRepository.findAllByStatus(candidateStatus);
     }
 
     @GetMapping("/candidate/{id}")

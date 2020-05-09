@@ -26,6 +26,8 @@ public class Candidate {
 
     private String phoneNumber;
 
+    private String status;
+
     @NotNull
     private String email;
 
@@ -69,5 +71,13 @@ public class Candidate {
 
     public void setAttachment(String attachment) {
         this.attachment = attachment;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -3,6 +3,7 @@ package io.hrmodule.hrservice.rest;
 import io.hrmodule.hrservice.document.Vacancy;
 import io.hrmodule.hrservice.exception.ResourceNotFoundException;
 import io.hrmodule.hrservice.repository.VacancyRepository;
+import io.hrmodule.hrservice.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +19,8 @@ import java.util.Map;
 public class VacancyController {
     @Autowired
     private VacancyRepository vacancyRepository;
+
+    private NotificationService notificationService;
 
     @GetMapping("/vacancies")
     public List<Vacancy> getAllVacancies() {
