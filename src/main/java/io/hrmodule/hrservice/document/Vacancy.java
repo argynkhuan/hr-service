@@ -23,6 +23,8 @@ public class Vacancy {
     @NotNull
     private String name;
 
+    private String position;
+
     @NotNull
     private List<String> employeeIds;
 
@@ -50,5 +52,13 @@ public class Vacancy {
 
     public void setCandidateIds(List<String> candidateIds) {
         this.candidateIds = candidateIds;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
