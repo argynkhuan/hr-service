@@ -19,28 +19,28 @@ public class Employee {
     private String id;
 
     @NotNull
-    private String name;
-
-    private String surname;
+    private String fullName;
 
     private String email;
 
     private String phoneNumber;
 
-    public String getName() {
-        return name;
+    private String position;
+
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getPosition() {
+        return position;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public String getEmail() {

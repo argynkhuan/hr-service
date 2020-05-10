@@ -21,7 +21,7 @@ public class NotificationService {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setFrom(employee.getEmail());
         mailMessage.setTo("argynkhuan@yandex.kz");
-        mailMessage.setSubject("New feedback from " + employee.getName() + "" + employee.getSurname());
+        mailMessage.setSubject("New feedback from " + employee.getFullName());
         mailMessage.setText("plain text of email");
 
         // Send mail
