@@ -47,8 +47,8 @@ public class VacancyController {
                 .orElseThrow(() -> new ResourceNotFoundException("Vacancy not found for this id :: " + vacancyId));
 
         vacancy.setName(vacancyDetails.getName());
-        vacancy.setEmployees(vacancyDetails.getEmployees());
-        vacancy.setCandidates(vacancyDetails.getCandidates());
+        vacancy.setEmployeeIds(vacancyDetails.getEmployeeIds());
+        vacancy.setCandidateIds(vacancyDetails.getCandidateIds());
         final Vacancy updatedVacancy = vacancyRepository.save(vacancy);
         return ResponseEntity.ok(updatedVacancy);
     }

@@ -51,7 +51,6 @@ public class CandidateController {
 
 
         candidate.setFullName(candidateDetails.getFullName());
-        candidate.setSurname(candidateDetails.getSurname());
         candidate.setEmail(candidateDetails.getEmail());
         candidate.setPhoneNumber(candidateDetails.getPhoneNumber());
         candidate.setAttachment(candidateDetails.getAttachment());
