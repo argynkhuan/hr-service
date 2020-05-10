@@ -21,9 +21,6 @@ public class Candidate {
     @NotNull
     private String fullName;
 
-    @NotNull
-    private String surname;
-
     private String phoneNumber;
 
     private String status;
@@ -39,14 +36,6 @@ public class Candidate {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public String getPhoneNumber() {

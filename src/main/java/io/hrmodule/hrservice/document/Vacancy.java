@@ -24,9 +24,9 @@ public class Vacancy {
     private String name;
 
     @NotNull
-    private List<Employee> employees;
+    private List<String> employeeIds;
 
-    private List<Candidate> candidates;
+    private List<String> candidateIds;
 
     public String getName() {
         return name;
@@ -36,19 +36,19 @@ public class Vacancy {
         this.name = name;
     }
 
-    public List<Employee> getEmployees() {
-        return employees;
+    public List<String> getEmployeeIds() {
+        return employeeIds;
     }
 
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
+    public void setEmployeeIds(List<String> employeeIds) {
+        this.employeeIds = employeeIds;
     }
 
-    public List<Candidate> getCandidates() {
-        return candidates;
+    public List<String> getCandidateIds() {
+        return candidateIds;
     }
 
-    public void setCandidates(List<Candidate> candidates) {
-        this.candidates = candidates;
+    public void setCandidateIds(List<String> candidateIds) {
+        this.candidateIds = candidateIds;
     }
 }
